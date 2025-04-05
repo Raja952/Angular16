@@ -1,0 +1,6 @@
+D:\AngularWithMVC\FurnitureDO\bin\Release\FurnitureDO.dll
+D:\AngularWithMVC\FurnitureDO\bin\Release\FurnitureDO.pdb
+D:\AngularWithMVC\FurnitureDO\obj\Release\FurnitureDO.csproj.AssemblyReference.cache
+D:\AngularWithMVC\FurnitureDO\obj\Release\FurnitureDO.csproj.CoreCompileInputs.cache
+D:\AngularWithMVC\FurnitureDO\obj\Release\FurnitureDO.dll
+D:\AngularWithMVC\FurnitureDO\obj\Release\FurnitureDO.pdb

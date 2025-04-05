@@ -26,5 +26,14 @@ namespace Angular16.Controllers
 
             return View();
         }
+
+        public ActionResult Home()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+
     }
 }

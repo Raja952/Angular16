@@ -1,0 +1,56 @@
+D:\Angular\Backup with Side Menu and Woodex changes\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.AssemblyReference.cache
+D:\Angular\Backup with Side Menu and Woodex changes\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.CoreCompileInputs.cache
+D:\Angular\Backup with Side Menu and Woodex changes\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.dll
+D:\Angular\Backup with Side Menu and Woodex changes\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.pdb
+D:\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDAL.dll
+D:\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDAL.pdb
+D:\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDO.dll
+D:\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDO.pdb
+D:\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.AssemblyReference.cache
+D:\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.CoreCompileInputs.cache
+D:\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.CopyComplete
+D:\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.dll
+D:\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.pdb
+D:\AngularWithMVC\FurnitureDAL\bin\Debug\BouncyCastle.Crypto.dll
+D:\AngularWithMVC\FurnitureDAL\bin\Debug\Newtonsoft.Json.dll
+D:\AngularWithMVC\FurnitureDAL\bin\Debug\Razorpay.dll
+D:\AngularWithMVC\FurnitureDAL\bin\Debug\BouncyCastle.Crypto.xml
+D:\AngularWithMVC\FurnitureDAL\bin\Debug\Newtonsoft.Json.xml
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDAL.dll
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDAL.pdb
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\bin\Debug\BouncyCastle.Crypto.dll
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDO.dll
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\bin\Debug\Newtonsoft.Json.dll
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\bin\Debug\Razorpay.dll
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDO.pdb
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\bin\Debug\BouncyCastle.Crypto.xml
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\bin\Debug\Newtonsoft.Json.xml
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.AssemblyReference.cache
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.CoreCompileInputs.cache
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.CopyComplete
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.dll
+D:\Angular\10072024\Backup\20102024\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.pdb
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDAL.dll
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDAL.pdb
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\bin\Debug\BouncyCastle.Crypto.dll
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDO.dll
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\bin\Debug\Newtonsoft.Json.dll
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\bin\Debug\Razorpay.dll
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\bin\Debug\FurnitureDO.pdb
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\bin\Debug\BouncyCastle.Crypto.xml
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\bin\Debug\Newtonsoft.Json.xml
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.AssemblyReference.cache
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.CoreCompileInputs.cache
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.CopyComplete
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.dll
+D:\Angular\10072024\AngularWithMVC\FurnitureDAL\obj\Debug\FurnitureDAL.pdb
+D:\Angular16\FurnitureDAL\bin\Debug\FurnitureDAL.dll
+D:\Angular16\FurnitureDAL\bin\Debug\FurnitureDAL.pdb
+D:\Angular16\FurnitureDAL\bin\Debug\FurnitureDO.dll
+D:\Angular16\FurnitureDAL\bin\Debug\Newtonsoft.Json.dll
+D:\Angular16\FurnitureDAL\bin\Debug\FurnitureDO.pdb
+D:\Angular16\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.AssemblyReference.cache
+D:\Angular16\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.CoreCompileInputs.cache
+D:\Angular16\FurnitureDAL\obj\Debug\FurnitureDAL.csproj.CopyComplete
+D:\Angular16\FurnitureDAL\obj\Debug\FurnitureDAL.dll
+D:\Angular16\FurnitureDAL\obj\Debug\FurnitureDAL.pdb

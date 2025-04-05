@@ -1,0 +1,183 @@
+﻿@using System
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/NewLayout.cshtml";
+}
+
+
+@{
+    var clientId = "86v6tyzuu0157l"; // Replace with your actual Client ID
+    var redirectUri = "http://localhost/Furniture/Admin/RedirectLinkedIN"; // Your redirect URI
+    //var state = "987654321"; // Your state parameter
+
+    var state = Guid.NewGuid().ToString();
+
+    var scope = "r_liteprofile r_emailaddress"; // Correct LinkedIn scopes
+
+    // Debugging: Check individual components
+    var encodedRedirectUri = Uri.EscapeDataString(redirectUri);
+    var encodedScope = Uri.EscapeDataString(scope);
+
+    // Construct the authorization URL
+    var authorizationUrl = "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={clientId}&redirect_uri={encodedRedirectUri}&state={state}&scope={encodedScope}";
+}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page with Carousel</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="~/Css/Admin/Login.css" rel="stylesheet" />
+    <link href="~/Css/Admin/Register.css" rel="stylesheet" />
+</head>
+<body>
+    @{
+        var googleAuthUrl = ViewBag.response as string;
+    }
+
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="~/Images/BGImage-Furniture-1.jpg" alt="First slide image">
+            <img src="~/Images/BGImage-Furniture-2.jpg" alt="Second slide image">
+            <img src="~/Images/BGImage-Furniture-3.jpg" alt="Third slide image">
+        </div>
+    </div>
+
+    <div class="login-container" style="margin-top:100px;">
+        <div class="login-form">
+            <h3>Login to Your Account</h3>
+            <form method="post" action="~/Admin/Login">
+                @Html.AntiForgeryToken() <!-- Razor syntax to add token -->
+                <div class="form-group mb-3">
+                    <input type="email" class="form-control" name="UserEmail" id="txtUserEmail" placeholder="Your email address..." maxlength="100" required>
+                </div>
+                <div class="form-group mb-4">
+                    <input type="password" class="form-control" id="txtPassword" placeholder="Your password..." name="Password" maxlength="50" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block w-100" onclick="Login(event)">Login</button>
+            </form>
+            <div class="text-center">or use a social network</div>
+            <div style="border-bottom: 1px solid #ccc; margin: 10px 0;"></div> <!-- Divider line -->
+            <div class="social-buttons">
+                <a href="@googleAuthUrl" class="social-button google">
+                    <i class="fa fa-google"></i> Google
+                </a>
+                <a href="https://github.com/login/oauth/authorize?client_id=@ViewBag.ClientId&amp;redirect_uri=@ViewBag.RedirectUrl&amp;scope=user:email" class="social-button github">
+                    <i class="fa fa-github"></i> GitHub
+                </a>
+                <a href="@authorizationUrl" class="social-button linkedin">
+                    <i class="fa fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <div style="border-bottom: 1px solid #ccc; margin: 10px 0; padding: 5px;"></div> <!-- Divider line -->
+
+            <div class="links mt-3">
+                <a  onclick="OpenRegisterModel()">Create your Account Here</a>
+                <a  onclick="OpenForgetPasswordModel()">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+
+
+    <form class="modal fade register-form" id="ForgetPasswordModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true" method="post" action="~/Admin/ForgetPassword">
+        @Html.AntiForgeryToken() <!-- Razor syntax to add token -->
+
+        <div class="modal-dialog modal-lg-custom modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <a class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </a>
+                <div class="form-title text-center">
+                    <h3>Forget Password</h3>
+                </div>
+                <div style="border-bottom: 1px solid #ccc; margin: 10px 0; padding: 5px;"></div>  @*Divider line*@
+                <div class="modal-body">
+                    <div class="d-flex flex-column text-center">
+                        <div class="form-group">
+                            <input class="form-control" id="Ftxtuserid" name="Ftxtuserid" placeholder="Enter UserName"
+                                   maxlength="100" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="Ftxtemailid" name="Ftxtemailid" placeholder="Enter Email"
+                                   maxlength="50" type="text" required>
+                        </div>
+                        <!-- Remove onclick, use event listener in JS -->
+                        <button type="button" id="btnForgetPassword" class="btn btn-primary btn-block w-100"
+                                onclick="ForgetPassword(event)">
+                            Reset Password
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <div id="RegisterModel" class="modal fade register-form" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <a class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </a>
+                <div class="form-title text-center">
+                    <h3>Create Account Here</h3>
+                </div>
+                <div style="border-bottom: 1px solid #ccc; margin: 10px 0; padding: 5px;"></div>
+                <div class="modal-body">
+                    <form id="registerForm" method="post" action="~/Admin/Registration">
+                        @Html.AntiForgeryToken() <!-- Razor syntax to add token -->
+                        <div class="d-flex flex-column text-center">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="txtname" placeholder="Enter Your Name..." required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="txtemail" placeholder="Enter Your Email..." required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="txtpassword" placeholder="Your Password..." required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="txtaddress" placeholder="Enter Your Address..." required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" id="txtphone" placeholder="Enter Your Phone..." required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-block w-100 btn-info" id="btnRegister" onclick="Register(event)">Register</button>
+                            </div>
+                            <p class="text-center text-sm text-orange-500 mt-4" style="color:chocolate">
+                                If you already registered,
+                                <a class="underline" onclick="AlreadyRegister()">Login Here</a>.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-images img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].classList.add('active');
+        }
+
+        function startCarousel() {
+            images[currentIndex].classList.add('active'); // Show the first image
+            setInterval(showNextImage, 3000); // Change image every 3 seconds
+        }
+
+        window.onload = startCarousel; // Start the carousel when the page loads
+    </script>
+</body>
+</html>

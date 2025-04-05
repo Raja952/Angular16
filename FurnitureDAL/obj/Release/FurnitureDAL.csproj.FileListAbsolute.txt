@@ -1,0 +1,9 @@
+D:\AngularWithMVC\FurnitureDAL\obj\Release\FurnitureDAL.csproj.AssemblyReference.cache
+D:\AngularWithMVC\FurnitureDAL\obj\Release\FurnitureDAL.csproj.CoreCompileInputs.cache
+D:\AngularWithMVC\FurnitureDAL\bin\Release\FurnitureDAL.dll
+D:\AngularWithMVC\FurnitureDAL\bin\Release\FurnitureDAL.pdb
+D:\AngularWithMVC\FurnitureDAL\bin\Release\FurnitureDO.dll
+D:\AngularWithMVC\FurnitureDAL\bin\Release\FurnitureDO.pdb
+D:\AngularWithMVC\FurnitureDAL\obj\Release\FurnitureDAL.csproj.CopyComplete
+D:\AngularWithMVC\FurnitureDAL\obj\Release\FurnitureDAL.dll
+D:\AngularWithMVC\FurnitureDAL\obj\Release\FurnitureDAL.pdb

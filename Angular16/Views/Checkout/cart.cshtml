@@ -1,0 +1,61 @@
+﻿@using FurnitureBLL;
+@{
+    ViewBag.Title = "cart";
+    //Layout = "~/Views/Shared/NewLayout.cshtml";
+}
+
+<html>
+<head>
+    <title>
+        Shopping Cart
+    </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="~/Style/CSS/Cart.css" rel="stylesheet" />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    @*<script src="~/Scripts/Cart.js"></script>*@
+
+    <script src="~/node_modules/core-js/client/shim.min.js"></script>
+    <script src="~/node_modules/zone.js/dist/zone.js"></script>
+    <script src="~/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="~/app/systemjs.config.js"></script>
+    <script>
+        System.import('../app/Cart/main').catch(function (err) { });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/GetLocateAddress.js"></script>
+
+    @*Remove Cart Item Popup CSS*@
+    <style>
+
+        .cart-message {
+            display: flex;
+            align-items: center;
+        }
+
+            .cart-message img {
+                margin-right: 10px;
+            }
+
+            .cart-message .empty-text {
+                font-weight: bold;
+            }
+    </style>
+
+</head>
+<body>
+    <input type="hidden" id="hdnCartUserId" value="@SessionContext.Current.AISession.UserId" />
+    <div class="header">
+        <a href="../Home/Home?Identity=@SessionContext.Current.AISession.SessionId" class="logo">Woodex</a>
+    </div>
+
+    <CartApp>Loading...</CartApp>
+
+</body>
+</html>
+
+
+
+
+
+
+

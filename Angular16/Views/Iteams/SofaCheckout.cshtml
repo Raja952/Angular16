@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "SofaCheckout";
+    Layout = "~/Views/Shared/NewLayout.cshtml";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Product Page</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="~/Scripts/GetLocateAddress.js"></script>
+    <link href="~/Style/CSS/Checkout.css" rel="stylesheet" />
+    
+    <script>
+        System.import('../app/Iteams/Sofacheckout/main').catch(function (err) { });
+    </script>
+
+
+</head>
+<body>
+    <div class="container my-4" style="margin-top:100px;">
+        <sofaChekout>Angular</sofaChekout>
+    </div>
+    <script>
+        const images = [
+            "https://ii1.pepperfry.com/media/catalog/product/a/n/1250x625/andres-2-seater-sofa-in-ash-grey-colour-by-woodsworth-andres-2-seater-sofa-in-ash-grey-colour-by-woo-xf5y5m.jpg",
+            "https://ii1.pepperfry.com/media/catalog/product/a/n/112x56/andres-2-seater-sofa-in-ash-grey-colour-by-woodsworth-andres-2-seater-sofa-in-ash-grey-colour-by-woo-xf5y5m.jpg",
+            "https://ii1.pepperfry.com/media/catalog/product/a/n/112x56/andres-fabric-2-seater-sofa-in-ash-grey-colour-andres-fabric-2-seater-sofa-in-ash-grey-colour-uuwj61.jpg"
+        ];
+
+        let currentImageIndex = 0;
+
+        function changeImage(index) {
+            currentImageIndex = index;
+            document.getElementById('main-image').src = images[currentImageIndex];
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.getElementById('main-image').src = images[currentImageIndex];
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            document.getElementById('main-image').src = images[currentImageIndex];
+        }
+    </script>
+    <script src="~/Scripts/SideMenu.js"></script>
+</body>
+</html>
+

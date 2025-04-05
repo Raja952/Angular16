@@ -1,0 +1,330 @@
+﻿﻿@using FurnitureBLL;
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Woodex Furniture">
+    <title>Woodex - Premium Quality Furniture</title>
+    <meta name="title" content="Woodex - Premium Furniture & Home Decor">
+    <meta name="description" content="Discover handcrafted furniture & home decor at Woodex. Sofas, beds, dining sets & more with free shipping & lifetime warranty.">
+    <meta name="keywords" content="wooden furniture, home decor, sofas, beds, dining sets, luxury furniture">
+    <meta property="og:title" content="Woodex - Premium Furniture & Home Decor">
+    <meta property="og:description" content="Discover handcrafted furniture & home decor at Woodex.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://woodex.com">
+    <meta property="og:image" content="https://woodex.com/images/og-image.jpg">
+    <link href="~/Content/Furniture.css" rel="stylesheet" />
+    <script type="application/ld+json">
+    @Html.Raw(@"{
+      ""@context"": ""https://schema.org"",
+      ""@type"": ""FurnitureStore"",
+      ""name"": ""Woodex"",
+      ""description"": ""Premium handcrafted furniture and home decor"",
+      ""url"": ""https://woodex.com"",
+      ""logo"": ""https://woodex.com/images/logo.png"",
+      ""priceRange"": ""$$$"",
+      ""address"": {
+        ""@type"": ""PostalAddress"",
+        ""streetAddress"": ""123 Furniture St"",
+        ""addressLocality"": ""New York"",
+        ""addressRegion"": ""NY"",
+        ""postalCode"": ""10001"",
+        ""addressCountry"": ""US""
+      }
+    }")
+    </script>
+</head>
+
+<body id="top">
+
+    <h3 class="pp" style="font-weight:bold;">We Believe You Are Unique</h3>
+    <p class="pp">
+        Why settle for furniture that is made for someone else? With aesthetic designs, premium materials and skilled artisanship, our team is committed to improve your shopping experience.
+    </p>
+
+    <div class="container categories">
+
+        <h2>Shop By Categories</h2>
+        <app-root></app-root>
+     
+    </div>
+
+    <main>
+        <article>
+            <!-- Hero section -->
+            <section class="section hero" id="home" aria-label="home">
+                <div class="container">
+                    <ul class="hero-list">
+
+                        <li>
+                            <div class="hero-card">
+
+                                <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
+                                    <img src="~/Images/hero-product-1.jpg" width="285" height="396" alt="Art Deco Home"
+                                         class="img-cover">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3>
+                                        <a href="#" class="card-title">Art Deco Home</a>
+                                    </h3>
+
+                                    <p class="card-text">Decoration</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="colspan-2">
+                            <div class="hero-card">
+
+                                <figure class="card-banner img-holder" style="--width: 568; --height: 389;">
+                                    <img src="~/Images/hero-product-2.jpg" width="568" height="389" alt="Helen Chair"
+                                         class="img-cover">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3>
+                                        <a href="#" class="card-title">Helen Chair</a>
+                                    </h3>
+
+                                    <p class="card-text">Decoration</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="hero-card">
+
+                                <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
+                                    <img src="~/Images/hero-product-3.jpg" width="285" height="396" alt="Vase Of Flowers"
+                                         class="img-cover">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3>
+                                        <a href="#" class="card-title">Vase Of Flowers</a>
+                                    </h3>
+
+                                    <p class="card-text">Decoration</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="colspan-2">
+                            <div class="hero-card">
+
+                                <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
+                                    <img src="~/Images/hero-product-4.jpg" width="580" height="213" alt="Wood Eggs"
+                                         class="img-cover">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3>
+                                        <a href="#" class="card-title">Wood Eggs</a>
+                                    </h3>
+
+                                    <p class="card-text">Decoration</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="colspan-2">
+                            <div class="hero-card">
+
+                                <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
+                                    <img src="~/Images/hero-product-5.jpg" width="580" height="213" alt="Table Wood Pine"
+                                         class="img-cover">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3>
+                                        <a href="#" class="card-title">Table Wood Pine</a>
+                                    </h3>
+
+                                    <p class="card-text">Furniture</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <!-- Hero cards here -->
+                    </ul>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section class="section about" id="about" aria-label="about">
+                <div class="container">
+                    <h2 class="section-title">Woodex Store</h2>
+                    <p class="section-text">
+                        When you start with a portrait and search for a pure form, a clear volume, through successive eliminations,
+                        you arrive inevitably at the egg. Likewise, starting with the egg and following the same process in reverse, one
+                        finishes with the portrait.
+                    </p>
+                    <div class="about-card">
+                        <figure class="card-banner img-holder" style="--width: 1170; --height: 450;">
+                            <img src="~/Images/about-banner.jpg" width="1170" height="450" loading="lazy" alt="Woodex promo" class="img-cover">
+                        </figure>
+                        <button class="play-btn" aria-label="play video">
+                            <ion-icon name="play-circle-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products section -->
+            <section class="section product InpBtb" id="product" aria-label="product">
+                <div class="container">
+                    <div class="title-wrapper">
+                        <h2 class="h2 section-title">Popular Products</h2>
+                        <ul class="filter-btn-list">
+                            <li class="filter-btn-item">
+                                <button class="filter-btn active InpBtb" data-filter-btn="all">All Products</button>
+                            </li>
+                            <li class="filter-btn-item">
+                                <button class="filter-btn InpBtb" data-filter-btn="accessory">Accessory</button>
+                            </li>
+                            <li class="filter-btn-item">
+                                <button class="filter-btn InpBtb" data-filter-btn="decoration">Decoration</button>
+                            </li>
+                            <li class="filter-btn-item">
+                                <button class="filter-btn InpBtb" data-filter-btn="furniture">Furniture</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="grid-list product-list" data-filter="all">
+                        <!-- All product items here (19 total) -->
+                        <li class="decoration">
+                            <div class="product-card">
+                                <a href="@Url.Action("Index", "Iteams")" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                                    <img src="~/Images/product-1.jpg" width="300" height="300" loading="lazy" alt="Animi Dolor Pariatur" class="img-cover">
+                                    <ul class="card-action-list">
+                                        <li>
+                                            <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                                                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                                                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                                                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <ul class="badge-list">
+                                        <li>
+                                            <div class="badge orange">Sale</div>
+                                        </li>
+                                        <li>
+                                            <div class="badge cyan">-10%</div>
+                                        </li>
+                                    </ul>
+                                </a>
+                                <div class="card-content">
+                                    <h3 class="h3">
+                                        <a href="@Url.Action("Index","Iteams")" class="card-title">Animi Dolor Pariaturr</a>
+                                    </h3>
+                                    <div class="card-price">
+                                        <del class="del">$19.00</del>
+                                        <data class="price" value="10">$10.00</data>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Other product items... -->
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Blog section -->
+            <section class="section blog" id="blog" aria-label="blog">
+                <div class="container">
+                    <div class="title-wrapper">
+                        <h2 class="h2 section-title">Explore our blog</h2>
+                        <a href="#" class="btn-link">
+                            <span class="span">View All</span>
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+                    </div>
+                    <ul class="grid-list">
+                        <li>
+                            <div class="blog-card">
+                                <div class="card-banner img-holder" style="--width: 374; --height: 243;">
+                                    <img src="~/Images/blog-1.jpg" width="374" height="243" loading="lazy" alt="Unique products that will impress your home in 2022." class="img-cover">
+                                    <a href="#" class="card-btn">
+                                        <span class="span">Read more</span>
+                                        <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                                    </a>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="h3">
+                                        <a href="#" class="card-title">Unique products that will impress your home in 2022.</a>
+                                    </h3>
+                                    <ul class="card-meta-list">
+                                        <li class="card-meta-item">
+                                            <time class="card-meta-text" datetime="2022-09-27">November 27, 2022</time>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <a href="#" class="card-meta-text">Admin</a>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            in <a href="#" class="card-meta-text">deco</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Other blog items... -->
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Newsletter section -->
+            <section class="section newsletter" aria-label="newsletter">
+                <div class="container">
+                    <div class="newsletter-card">
+                        <div class="card-content">
+                            <h2 class="h2 section-title">Our Newsletter</h2>
+                            <p class="section-text">
+                                Subscribe our newsletter and get discount 50% off
+                            </p>
+                        </div>
+                        <form action="" class="card-form">
+                            <input type="email" name="email_address" placeholder="Your email address" required class="email-field">
+                            <button type="submit" class="newsletter-btn" aria-label="subscribe">
+                                <a name="arrow-forward" aria-hidden="true">Subscribe</a>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Back to top button -->
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    <!-- jQuery UI for autocomplete -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</body>
+</html>

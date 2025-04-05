@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "SearchItem";
+    Layout = "~/Views/Shared/NewLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Input Box</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="~/Scripts/SearchItem.js"></script>
+
+    <style>
+        #SearchItemq {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping of items */
+            justify-content: flex-start; /* Align items to the start */
+        }
+
+        .product-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            flex: 1 1 calc(33.333% - 20px); /* Responsive width for three cards per row */
+            margin: 10px; /* Margin around each card */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+            .product-card img {
+                max-width: 100%; /* Make the image responsive */
+                height: auto; /* Maintain aspect ratio */
+                border-radius: 5px;
+            }
+
+            .product-card .product-info {
+                padding: 10px 0;
+            }
+    </style>
+
+
+
+</head>
+<body>
+    <input type="hidden" id="hdnHiddenItem" />
+
+    <div class="row">
+
+        <div id="SearchItemq"></div>
+
+    </div>
+
+
+    <script src="~/Scripts/SideMenu.js"></script>
+
+
+</body>
+</html>

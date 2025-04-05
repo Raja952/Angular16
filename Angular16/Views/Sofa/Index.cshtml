@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/NewLayout.cshtml";
+}
+
+@*<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script>
+            System.import('../app/Iteams/Sofa/main').catch(function (err) { });
+        </script>
+        <script src="~/Scripts/Account/Test.js"></script>
+
+
+    </head>
+    <body>
+
+        <h2>Home</h2>
+        <sofaApp></sofaApp>
+
+
+
+
+
+    </body>
+    </html>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Popup</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="~/Style/CSS/Loginpopup.css" rel="stylesheet" />
+    <script src="~/Scripts/Account/MakeMytrip.js"></script>
+</head>
+<body>
+    <button id="loginBtn">Login</button>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

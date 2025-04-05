@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "OfficeFurniture";
+    Layout = "~/Views/Shared/NewLayout.cshtml";
+
+}
+
+<script src="~/Scripts/SideMenu.js"></script>
+
+<html>
+<head>
+    <title>
+        OfficeFurniture Collection
+    </title>
+
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            background-color: transparent;
+        }
+
+        .sale-banner {
+            background-color: #f5e1d3;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+            .sale-banner h1 {
+                font-size: 24px;
+                margin: 0;
+            }
+
+            .sale-banner p {
+                margin: 0;
+                font-size: 14px;
+            }
+
+        .product-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+            .product-card img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+
+            .product-card .product-info {
+                padding: 10px 0;
+            }
+
+                .product-card .product-info h5 {
+                    font-size: 16px;
+                    margin: 0;
+                }
+
+                .product-card .product-info p {
+                    font-size: 14px;
+                    margin: 5px 0;
+                }
+
+                .product-card .product-info .price {
+                    font-size: 18px;
+                    color: #d9534f;
+                }
+
+                .product-card .product-info .original-price {
+                    text-decoration: line-through;
+                    color: #6c757d;
+                }
+
+                .product-card .product-info .discount {
+                    color: #28a745;
+                }
+    </style>
+
+
+    <script>
+        System.import('../app/Iteams/OfficeFurniture/main').catch(function (err) { });
+    </script>
+
+
+
+</head>
+<body>
+    <div class="container">
+
+
+        <div class="sale-banner">
+            <h1>
+                MEGA MORYA SALE
+            </h1>
+            <p>
+                Upto 75% OFF + 20% Cashback | Free Shipping on Everything
+            </p>
+        </div>
+
+        <div class="row">
+            <OfficeFurnitureApp></OfficeFurnitureApp>
+
+        </div>
+    </div>
+    <script src="~/Scripts/SideMenu.js"></script>
+</body>
+</html>

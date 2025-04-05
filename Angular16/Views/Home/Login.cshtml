@@ -1,0 +1,230 @@
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/NewLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page with Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+  
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+            .carousel-images img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensures the image covers the area without distortion */
+                opacity: 0; /* Start with opacity 0 */
+                transition: opacity 1s ease-in-out; /* Smooth transition */
+            }
+
+            .carousel-images img.active {
+                opacity: 1; /* Show only the active image */
+            }
+
+        .login-container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            /*background: rgba(255, 255, 255, 0.8); */ /* Semi-transparent background */
+        }
+
+        .login-form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .login-form h2 {
+                margin-bottom: 20px;
+            }
+
+            .login-form input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .login-form button {
+                width: 100%;
+                padding: 10px;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                .login-form button:hover {
+                    background-color: #0056b3;
+                }
+
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+            .links a {
+                color: #007BFF;
+                text-decoration: none;
+            }
+
+                .links a:hover {
+                    text-decoration: underline;
+                }
+
+
+        .google-link {
+            display: flex;
+            align-items: center;
+        }
+
+            .google-link i {
+                margin-right: 5px; /* Space between icon and text */
+            }
+    </style>
+
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="~/Images/blog-1.jpg" loading="lazy" />
+            <img src="~/Images/blog-2.jpg" loading="lazy" />
+            <img src="~/Images/blog-3.jpg" loading="lazy" />
+        </div>
+    </div>
+    <div class="login-container">
+            <div class="login-form">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="links">
+                    <a href="#" class="register-link">Register</a>
+                    <a href="#" class="forgot-password-link" data-toggle="modal" data-target="#ForgetPasswordModal">Forgot Password?</a>
+
+                </div>
+                <form class="modal fade register-form" id="ForgetPasswordModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true" method="post" action="~/Home/ForgetPassword">
+                    @Html.AntiForgeryToken() <!-- Razor syntax to add token -->
+
+                    <div class="modal-dialog modal-lg-custom modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <a class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="fa fa-times"></i>
+                            </a>
+                            <div class="form-title text-center">
+                                <h3>Forget Password</h3>
+                            </div>
+                            <div style="border-bottom: 1px solid #ccc; margin: 10px 0; padding: 5px;"></div>  @*Divider line*@
+                            <div class="modal-body">
+                                <div class="d-flex flex-column text-center">
+                                    <div class="form-group">
+                                        <input class="form-control" id="Ftxtuserid" name="Ftxtuserid" placeholder="Enter UserName" maxlength="100" type="text" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="Ftxtemailid" name="Ftxtemailid" placeholder="Enter Email" maxlength="50" type="text" required>
+                                    </div>
+                                    <button type="button" id="btnForgetPassword" class="btn btn-primary btn-block w-100" onclick="ForgetPassword()">
+                                        Reset Password
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-images img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active'); // Hide current image
+            images[currentIndex].style.display = 'none'; // Hide current image
+
+            currentIndex = (currentIndex + 1) % totalImages; // Move to the next image
+            images[currentIndex].classList.add('active'); // Show next image
+            images[currentIndex].style.display = 'block'; // Show next image
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+
+        // Initialize the first image
+        images.forEach((img, index) => {
+            img.style.display = index === 0 ? 'block' : 'none';
+        });
+
+        function openForgotPasswordPopup() {
+            document.getElementById('forgotPasswordPopup').style.display = 'block';
+        }
+
+        function closeForgotPasswordPopup() {
+            document.getElementById('forgotPasswordPopup').style.display = 'none';
+        }
+
+        function submitForgotPassword(event) {
+            event.preventDefault();
+            const email = document.querySelector('#forgotPasswordForm input[type="email"]').value;
+
+            // Call the controller action for forgot password
+            fetch('/Home/ForgotPassword', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ UserName: email }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                closeForgotPasswordPopup();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
